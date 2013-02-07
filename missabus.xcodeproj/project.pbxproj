@@ -1,0 +1,482 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DEDB167416C3D6B200DA85F0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDB167316C3D6B200DA85F0 /* UIKit.framework */; };
+		DEDB167616C3D6B200DA85F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDB167516C3D6B200DA85F0 /* Foundation.framework */; };
+		DEDB167816C3D6B200DA85F0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDB167716C3D6B200DA85F0 /* CoreGraphics.framework */; };
+		DEDB167E16C3D6B200DA85F0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DEDB167C16C3D6B200DA85F0 /* InfoPlist.strings */; };
+		DEDB168016C3D6B200DA85F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDB167F16C3D6B200DA85F0 /* main.m */; };
+		DEDB168416C3D6B200DA85F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDB168316C3D6B200DA85F0 /* AppDelegate.m */; };
+		DEDB168616C3D6B200DA85F0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DEDB168516C3D6B200DA85F0 /* Default.png */; };
+		DEDB168816C3D6B200DA85F0 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DEDB168716C3D6B200DA85F0 /* Default@2x.png */; };
+		DEDB168A16C3D6B200DA85F0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DEDB168916C3D6B200DA85F0 /* Default-568h@2x.png */; };
+		DEDB168D16C3D6B200DA85F0 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEDB168B16C3D6B200DA85F0 /* MainStoryboard_iPhone.storyboard */; };
+		DEDB169016C3D6B200DA85F0 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEDB168E16C3D6B200DA85F0 /* MainStoryboard_iPad.storyboard */; };
+		DEDB169316C3D6B200DA85F0 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDB169216C3D6B200DA85F0 /* MainViewController.m */; };
+		DEDB169616C3D6B200DA85F0 /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDB169516C3D6B200DA85F0 /* FlipsideViewController.m */; };
+		DEDB169E16C3D6B200DA85F0 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDB169D16C3D6B200DA85F0 /* SenTestingKit.framework */; };
+		DEDB169F16C3D6B200DA85F0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDB167316C3D6B200DA85F0 /* UIKit.framework */; };
+		DEDB16A016C3D6B200DA85F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDB167516C3D6B200DA85F0 /* Foundation.framework */; };
+		DEDB16A816C3D6B200DA85F0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DEDB16A616C3D6B200DA85F0 /* InfoPlist.strings */; };
+		DEDB16AB16C3D6B200DA85F0 /* missabusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDB16AA16C3D6B200DA85F0 /* missabusTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DEDB16A116C3D6B200DA85F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DEDB166616C3D6B100DA85F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DEDB166E16C3D6B200DA85F0;
+			remoteInfo = missabus;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DEDB166F16C3D6B200DA85F0 /* missabus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = missabus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEDB167316C3D6B200DA85F0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DEDB167516C3D6B200DA85F0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DEDB167716C3D6B200DA85F0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DEDB167B16C3D6B200DA85F0 /* missabus-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "missabus-Info.plist"; sourceTree = "<group>"; };
+		DEDB167D16C3D6B200DA85F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DEDB167F16C3D6B200DA85F0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DEDB168116C3D6B200DA85F0 /* missabus-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "missabus-Prefix.pch"; sourceTree = "<group>"; };
+		DEDB168216C3D6B200DA85F0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DEDB168316C3D6B200DA85F0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DEDB168516C3D6B200DA85F0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		DEDB168716C3D6B200DA85F0 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		DEDB168916C3D6B200DA85F0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		DEDB168C16C3D6B200DA85F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		DEDB168F16C3D6B200DA85F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		DEDB169116C3D6B200DA85F0 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		DEDB169216C3D6B200DA85F0 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		DEDB169416C3D6B200DA85F0 /* FlipsideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlipsideViewController.h; sourceTree = "<group>"; };
+		DEDB169516C3D6B200DA85F0 /* FlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
+		DEDB169C16C3D6B200DA85F0 /* missabusTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = missabusTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEDB169D16C3D6B200DA85F0 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		DEDB16A516C3D6B200DA85F0 /* missabusTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "missabusTests-Info.plist"; sourceTree = "<group>"; };
+		DEDB16A716C3D6B200DA85F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DEDB16A916C3D6B200DA85F0 /* missabusTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = missabusTests.h; sourceTree = "<group>"; };
+		DEDB16AA16C3D6B200DA85F0 /* missabusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = missabusTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DEDB166C16C3D6B200DA85F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEDB167416C3D6B200DA85F0 /* UIKit.framework in Frameworks */,
+				DEDB167616C3D6B200DA85F0 /* Foundation.framework in Frameworks */,
+				DEDB167816C3D6B200DA85F0 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEDB169816C3D6B200DA85F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEDB169E16C3D6B200DA85F0 /* SenTestingKit.framework in Frameworks */,
+				DEDB169F16C3D6B200DA85F0 /* UIKit.framework in Frameworks */,
+				DEDB16A016C3D6B200DA85F0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DEDB166416C3D6B100DA85F0 = {
+			isa = PBXGroup;
+			children = (
+				DEDB167916C3D6B200DA85F0 /* missabus */,
+				DEDB16A316C3D6B200DA85F0 /* missabusTests */,
+				DEDB167216C3D6B200DA85F0 /* Frameworks */,
+				DEDB167016C3D6B200DA85F0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DEDB167016C3D6B200DA85F0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DEDB166F16C3D6B200DA85F0 /* missabus.app */,
+				DEDB169C16C3D6B200DA85F0 /* missabusTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DEDB167216C3D6B200DA85F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DEDB167316C3D6B200DA85F0 /* UIKit.framework */,
+				DEDB167516C3D6B200DA85F0 /* Foundation.framework */,
+				DEDB167716C3D6B200DA85F0 /* CoreGraphics.framework */,
+				DEDB169D16C3D6B200DA85F0 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DEDB167916C3D6B200DA85F0 /* missabus */ = {
+			isa = PBXGroup;
+			children = (
+				DEDB168216C3D6B200DA85F0 /* AppDelegate.h */,
+				DEDB168316C3D6B200DA85F0 /* AppDelegate.m */,
+				DEDB168B16C3D6B200DA85F0 /* MainStoryboard_iPhone.storyboard */,
+				DEDB168E16C3D6B200DA85F0 /* MainStoryboard_iPad.storyboard */,
+				DEDB169116C3D6B200DA85F0 /* MainViewController.h */,
+				DEDB169216C3D6B200DA85F0 /* MainViewController.m */,
+				DEDB169416C3D6B200DA85F0 /* FlipsideViewController.h */,
+				DEDB169516C3D6B200DA85F0 /* FlipsideViewController.m */,
+				DEDB167A16C3D6B200DA85F0 /* Supporting Files */,
+			);
+			path = missabus;
+			sourceTree = "<group>";
+		};
+		DEDB167A16C3D6B200DA85F0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DEDB167B16C3D6B200DA85F0 /* missabus-Info.plist */,
+				DEDB167C16C3D6B200DA85F0 /* InfoPlist.strings */,
+				DEDB167F16C3D6B200DA85F0 /* main.m */,
+				DEDB168116C3D6B200DA85F0 /* missabus-Prefix.pch */,
+				DEDB168516C3D6B200DA85F0 /* Default.png */,
+				DEDB168716C3D6B200DA85F0 /* Default@2x.png */,
+				DEDB168916C3D6B200DA85F0 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DEDB16A316C3D6B200DA85F0 /* missabusTests */ = {
+			isa = PBXGroup;
+			children = (
+				DEDB16A916C3D6B200DA85F0 /* missabusTests.h */,
+				DEDB16AA16C3D6B200DA85F0 /* missabusTests.m */,
+				DEDB16A416C3D6B200DA85F0 /* Supporting Files */,
+			);
+			path = missabusTests;
+			sourceTree = "<group>";
+		};
+		DEDB16A416C3D6B200DA85F0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DEDB16A516C3D6B200DA85F0 /* missabusTests-Info.plist */,
+				DEDB16A616C3D6B200DA85F0 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DEDB166E16C3D6B200DA85F0 /* missabus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEDB16AE16C3D6B200DA85F0 /* Build configuration list for PBXNativeTarget "missabus" */;
+			buildPhases = (
+				DEDB166B16C3D6B200DA85F0 /* Sources */,
+				DEDB166C16C3D6B200DA85F0 /* Frameworks */,
+				DEDB166D16C3D6B200DA85F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = missabus;
+			productName = missabus;
+			productReference = DEDB166F16C3D6B200DA85F0 /* missabus.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DEDB169B16C3D6B200DA85F0 /* missabusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEDB16B116C3D6B200DA85F0 /* Build configuration list for PBXNativeTarget "missabusTests" */;
+			buildPhases = (
+				DEDB169716C3D6B200DA85F0 /* Sources */,
+				DEDB169816C3D6B200DA85F0 /* Frameworks */,
+				DEDB169916C3D6B200DA85F0 /* Resources */,
+				DEDB169A16C3D6B200DA85F0 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DEDB16A216C3D6B200DA85F0 /* PBXTargetDependency */,
+			);
+			name = missabusTests;
+			productName = missabusTests;
+			productReference = DEDB169C16C3D6B200DA85F0 /* missabusTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DEDB166616C3D6B100DA85F0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Jaakko Santala";
+			};
+			buildConfigurationList = DEDB166916C3D6B100DA85F0 /* Build configuration list for PBXProject "missabus" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DEDB166416C3D6B100DA85F0;
+			productRefGroup = DEDB167016C3D6B200DA85F0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DEDB166E16C3D6B200DA85F0 /* missabus */,
+				DEDB169B16C3D6B200DA85F0 /* missabusTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DEDB166D16C3D6B200DA85F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEDB167E16C3D6B200DA85F0 /* InfoPlist.strings in Resources */,
+				DEDB168616C3D6B200DA85F0 /* Default.png in Resources */,
+				DEDB168816C3D6B200DA85F0 /* Default@2x.png in Resources */,
+				DEDB168A16C3D6B200DA85F0 /* Default-568h@2x.png in Resources */,
+				DEDB168D16C3D6B200DA85F0 /* MainStoryboard_iPhone.storyboard in Resources */,
+				DEDB169016C3D6B200DA85F0 /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEDB169916C3D6B200DA85F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEDB16A816C3D6B200DA85F0 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DEDB169A16C3D6B200DA85F0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DEDB166B16C3D6B200DA85F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEDB168016C3D6B200DA85F0 /* main.m in Sources */,
+				DEDB168416C3D6B200DA85F0 /* AppDelegate.m in Sources */,
+				DEDB169316C3D6B200DA85F0 /* MainViewController.m in Sources */,
+				DEDB169616C3D6B200DA85F0 /* FlipsideViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEDB169716C3D6B200DA85F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEDB16AB16C3D6B200DA85F0 /* missabusTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DEDB16A216C3D6B200DA85F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DEDB166E16C3D6B200DA85F0 /* missabus */;
+			targetProxy = DEDB16A116C3D6B200DA85F0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DEDB167C16C3D6B200DA85F0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DEDB167D16C3D6B200DA85F0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DEDB168B16C3D6B200DA85F0 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DEDB168C16C3D6B200DA85F0 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		DEDB168E16C3D6B200DA85F0 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DEDB168F16C3D6B200DA85F0 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		DEDB16A616C3D6B200DA85F0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DEDB16A716C3D6B200DA85F0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DEDB16AC16C3D6B200DA85F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DEDB16AD16C3D6B200DA85F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DEDB16AF16C3D6B200DA85F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "missabus/missabus-Prefix.pch";
+				INFOPLIST_FILE = "missabus/missabus-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DEDB16B016C3D6B200DA85F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "missabus/missabus-Prefix.pch";
+				INFOPLIST_FILE = "missabus/missabus-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DEDB16B216C3D6B200DA85F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/missabus.app/missabus";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "missabus/missabus-Prefix.pch";
+				INFOPLIST_FILE = "missabusTests/missabusTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		DEDB16B316C3D6B200DA85F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/missabus.app/missabus";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "missabus/missabus-Prefix.pch";
+				INFOPLIST_FILE = "missabusTests/missabusTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DEDB166916C3D6B100DA85F0 /* Build configuration list for PBXProject "missabus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEDB16AC16C3D6B200DA85F0 /* Debug */,
+				DEDB16AD16C3D6B200DA85F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DEDB16AE16C3D6B200DA85F0 /* Build configuration list for PBXNativeTarget "missabus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEDB16AF16C3D6B200DA85F0 /* Debug */,
+				DEDB16B016C3D6B200DA85F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DEDB16B116C3D6B200DA85F0 /* Build configuration list for PBXNativeTarget "missabusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEDB16B216C3D6B200DA85F0 /* Debug */,
+				DEDB16B316C3D6B200DA85F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DEDB166616C3D6B100DA85F0 /* Project object */;
+}
