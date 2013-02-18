@@ -21,5 +21,7 @@
 
 - (void) login: (id) delegate;
 - (NSString *) userId;
+- (NSMutableArray *) linesOfInterest;
+- (void) linesOfInterest: (NSMutableArray *) array;
 
 @end

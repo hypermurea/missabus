@@ -23,4 +23,12 @@
 	STAssertEquals([ident userId], [ident userId], @"UUID should remain the same on multiple invocations");
 }
 
+- (void) testGetEmptyLinesOfInterest {
+	STFail(@"not implemented yet");
+}
+
+- (void) testSetLinesOfInterestShouldChangeGetResult {
+	STFail(@"not implemented yet");
+}
+
 @end

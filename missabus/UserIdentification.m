@@ -42,6 +42,15 @@
 	
 }
 
+- (NSMutableArray *) linesOfInterest {
+	return nil;
+}
+
+- (void) linesOfInterest: (NSMutableArray *) array {
+	
+}
+
+
 - (NSString *) userId {
 	NSString *idKey = @"userid";
 	NSString *ident = [[propertyStore properties] objectForKey:idKey];
