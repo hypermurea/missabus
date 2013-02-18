@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE3D098F16D220C100C64EA8 /* PropertyStore.m in Sources */ = {isa = PBXBuildFile; fileRef = DE3D098E16D220C100C64EA8 /* PropertyStore.m */; };
+		DE3D099416D22FF000C64EA8 /* PropertyStoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE3D099316D22FF000C64EA8 /* PropertyStoreTests.m */; };
+		DE3D099716D24D8800C64EA8 /* UserIdentificationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE3D099616D24D8800C64EA8 /* UserIdentificationTests.m */; };
 		DEDB167416C3D6B200DA85F0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDB167316C3D6B200DA85F0 /* UIKit.framework */; };
 		DEDB167616C3D6B200DA85F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDB167516C3D6B200DA85F0 /* Foundation.framework */; };
 		DEDB167816C3D6B200DA85F0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDB167716C3D6B200DA85F0 /* CoreGraphics.framework */; };
@@ -25,6 +28,8 @@
 		DEDB16A016C3D6B200DA85F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDB167516C3D6B200DA85F0 /* Foundation.framework */; };
 		DEDB16A816C3D6B200DA85F0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DEDB16A616C3D6B200DA85F0 /* InfoPlist.strings */; };
 		DEDB16AB16C3D6B200DA85F0 /* missabusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDB16AA16C3D6B200DA85F0 /* missabusTests.m */; };
+		DEDB16B616C3D98000DA85F0 /* UserIdentification.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDB16B516C3D98000DA85F0 /* UserIdentification.m */; };
+		DEDB16B916C3E15300DA85F0 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DEDB16B816C3E15300DA85F0 /* icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +43,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE3D098D16D220C100C64EA8 /* PropertyStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyStore.h; sourceTree = "<group>"; };
+		DE3D098E16D220C100C64EA8 /* PropertyStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyStore.m; sourceTree = "<group>"; };
+		DE3D099116D2235B00C64EA8 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		DE3D099216D22FF000C64EA8 /* PropertyStoreTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyStoreTests.h; sourceTree = "<group>"; };
+		DE3D099316D22FF000C64EA8 /* PropertyStoreTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyStoreTests.m; sourceTree = "<group>"; };
+		DE3D099516D24D8800C64EA8 /* UserIdentificationTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserIdentificationTests.h; sourceTree = "<group>"; };
+		DE3D099616D24D8800C64EA8 /* UserIdentificationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserIdentificationTests.m; sourceTree = "<group>"; };
 		DEDB166F16C3D6B200DA85F0 /* missabus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = missabus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEDB167316C3D6B200DA85F0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DEDB167516C3D6B200DA85F0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -63,6 +75,9 @@
 		DEDB16A716C3D6B200DA85F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DEDB16A916C3D6B200DA85F0 /* missabusTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = missabusTests.h; sourceTree = "<group>"; };
 		DEDB16AA16C3D6B200DA85F0 /* missabusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = missabusTests.m; sourceTree = "<group>"; };
+		DEDB16B416C3D98000DA85F0 /* UserIdentification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserIdentification.h; sourceTree = "<group>"; };
+		DEDB16B516C3D98000DA85F0 /* UserIdentification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserIdentification.m; sourceTree = "<group>"; };
+		DEDB16B816C3E15300DA85F0 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +107,7 @@
 		DEDB166416C3D6B100DA85F0 = {
 			isa = PBXGroup;
 			children = (
+				DEDB16B716C3E11000DA85F0 /* Resources */,
 				DEDB167916C3D6B200DA85F0 /* missabus */,
 				DEDB16A316C3D6B200DA85F0 /* missabusTests */,
 				DEDB167216C3D6B200DA85F0 /* Frameworks */,
@@ -125,12 +141,17 @@
 				DEDB168216C3D6B200DA85F0 /* AppDelegate.h */,
 				DEDB168316C3D6B200DA85F0 /* AppDelegate.m */,
 				DEDB168B16C3D6B200DA85F0 /* MainStoryboard_iPhone.storyboard */,
+				DEDB16B416C3D98000DA85F0 /* UserIdentification.h */,
+				DEDB16B516C3D98000DA85F0 /* UserIdentification.m */,
+				DE3D099116D2235B00C64EA8 /* Constants.h */,
 				DEDB168E16C3D6B200DA85F0 /* MainStoryboard_iPad.storyboard */,
 				DEDB169116C3D6B200DA85F0 /* MainViewController.h */,
 				DEDB169216C3D6B200DA85F0 /* MainViewController.m */,
 				DEDB169416C3D6B200DA85F0 /* FlipsideViewController.h */,
 				DEDB169516C3D6B200DA85F0 /* FlipsideViewController.m */,
 				DEDB167A16C3D6B200DA85F0 /* Supporting Files */,
+				DE3D098D16D220C100C64EA8 /* PropertyStore.h */,
+				DE3D098E16D220C100C64EA8 /* PropertyStore.m */,
 			);
 			path = missabus;
 			sourceTree = "<group>";
@@ -155,6 +176,10 @@
 				DEDB16A916C3D6B200DA85F0 /* missabusTests.h */,
 				DEDB16AA16C3D6B200DA85F0 /* missabusTests.m */,
 				DEDB16A416C3D6B200DA85F0 /* Supporting Files */,
+				DE3D099216D22FF000C64EA8 /* PropertyStoreTests.h */,
+				DE3D099316D22FF000C64EA8 /* PropertyStoreTests.m */,
+				DE3D099516D24D8800C64EA8 /* UserIdentificationTests.h */,
+				DE3D099616D24D8800C64EA8 /* UserIdentificationTests.m */,
 			);
 			path = missabusTests;
 			sourceTree = "<group>";
@@ -166,6 +191,14 @@
 				DEDB16A616C3D6B200DA85F0 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DEDB16B716C3E11000DA85F0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DEDB16B816C3E15300DA85F0 /* icon.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +278,7 @@
 				DEDB168A16C3D6B200DA85F0 /* Default-568h@2x.png in Resources */,
 				DEDB168D16C3D6B200DA85F0 /* MainStoryboard_iPhone.storyboard in Resources */,
 				DEDB169016C3D6B200DA85F0 /* MainStoryboard_iPad.storyboard in Resources */,
+				DEDB16B916C3E15300DA85F0 /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +317,8 @@
 				DEDB168416C3D6B200DA85F0 /* AppDelegate.m in Sources */,
 				DEDB169316C3D6B200DA85F0 /* MainViewController.m in Sources */,
 				DEDB169616C3D6B200DA85F0 /* FlipsideViewController.m in Sources */,
+				DEDB16B616C3D98000DA85F0 /* UserIdentification.m in Sources */,
+				DE3D098F16D220C100C64EA8 /* PropertyStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +327,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEDB16AB16C3D6B200DA85F0 /* missabusTests.m in Sources */,
+				DE3D099416D22FF000C64EA8 /* PropertyStoreTests.m in Sources */,
+				DE3D099716D24D8800C64EA8 /* UserIdentificationTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +505,7 @@
 				DEDB16B016C3D6B200DA85F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DEDB16B116C3D6B200DA85F0 /* Build configuration list for PBXNativeTarget "missabusTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +514,7 @@
 				DEDB16B316C3D6B200DA85F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
