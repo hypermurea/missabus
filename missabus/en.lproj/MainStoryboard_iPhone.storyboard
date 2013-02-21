@@ -12,79 +12,73 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10">
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="rxB-fN-H7l">
+                                <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <segue destination="6" kind="modal" identifier="showAlternate" modalTransitionStyle="flipHorizontal" id="11"/>
+                                    <outlet property="delegate" destination="jad-N6-p1b" id="UAG-Tu-cSe"/>
                                 </connections>
-                            </button>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="aG1-S3-e1P" userLabel="Lines of interest table">
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="separatorColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="2" id="7lT-92-fpI"/>
+                                    <outlet property="delegate" destination="2" id="HxX-PN-5KA"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="wim-DA-Yj6">
+                                <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="78" id="DUe-2O-DxG"/>
+                                </constraints>
+                                <string key="text">Alla näkyvät joukkoliikenteen linjat, joista tällä hetkellä vastaanotat häiriötiedotuksia. Voit käyttää hakupalkkia lisätäksesi uusia.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="highlightedColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="10" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="apl-1S-UOC"/>
-                            <constraint firstAttribute="bottom" secondItem="10" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="bcr-if-aDO"/>
+                            <constraint firstItem="rxB-fN-H7l" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="5Ex-CJ-gIi"/>
+                            <constraint firstItem="rxB-fN-H7l" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="8eV-5w-BSM"/>
+                            <constraint firstItem="rxB-fN-H7l" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="JLk-Fp-AtJ"/>
+                            <constraint firstItem="aG1-S3-e1P" firstAttribute="top" secondItem="wim-DA-Yj6" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="LnP-xf-8Rz"/>
+                            <constraint firstItem="wim-DA-Yj6" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="VLA-RU-mET"/>
+                            <constraint firstItem="wim-DA-Yj6" firstAttribute="top" secondItem="rxB-fN-H7l" secondAttribute="bottom" type="default" id="g5M-ER-2fi"/>
+                            <constraint firstItem="aG1-S3-e1P" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="gw9-YY-rNJ"/>
+                            <constraint firstItem="wim-DA-Yj6" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="kRC-wX-EUX"/>
+                            <constraint firstItem="aG1-S3-e1P" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="kUu-3e-lQp"/>
+                            <constraint firstItem="aG1-S3-e1P" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="qs1-28-AUt"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="linesOfInterestTableView" destination="aG1-S3-e1P" id="ngD-OO-zJn"/>
+                        <outlet property="searchDisplayController" destination="jad-N6-p1b" id="eNd-OO-GQ2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="jad-N6-p1b" customClass="TransportSearchDisplayController">
+                    <connections>
+                        <outlet property="searchBar" destination="rxB-fN-H7l" id="lMO-5m-f20"/>
+                        <outlet property="searchContentsController" destination="2" id="mgv-C2-WP3"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="-51" y="182"/>
         </scene>
-        <!--Flipside View Controller-->
-        <scene sceneID="9">
-            <objects>
-                <viewController id="6" customClass="FlipsideViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <navigationBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="12">
-                                <items>
-                                    <navigationItem title="Missabus" id="13">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="14">
-                                            <connections>
-                                                <action selector="done:" destination="6" id="16"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="12" firstAttribute="leading" secondItem="7" secondAttribute="leading" type="default" id="kyL-VC-rMY"/>
-                            <constraint firstItem="12" firstAttribute="top" secondItem="7" secondAttribute="top" type="default" id="oQ7-QK-1Ab"/>
-                            <constraint firstItem="12" firstAttribute="trailing" secondItem="7" secondAttribute="trailing" type="default" id="yf5-Bx-wHg"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="368" y="182"/>
-        </scene>
     </scenes>
     <classes>
-        <class className="FlipsideViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FlipsideViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="done:"/>
-            </relationships>
-        </class>
         <class className="MainViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
             <relationships>
-                <relationship kind="action" name="togglePopover:"/>
+                <relationship kind="outlet" name="linesOfInterestTableView" candidateClass="UITableView"/>
             </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="TransportSearchDisplayController" superclassName="UISearchDisplayController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TransportSearchDisplayController.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

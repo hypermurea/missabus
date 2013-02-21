@@ -6,10 +6,11 @@
 //  Copyright (c) 2013 Jaakko Santala. All rights reserved.
 //
 
-#import "FlipsideViewController.h"
+#import "TransportSearchDisplayController.h"
 
-@interface MainViewController : UIViewController <FlipsideViewControllerDelegate, UIPopoverControllerDelegate, NSURLConnectionDelegate>
-
-@property (strong, nonatomic) UIPopoverController *flipsidePopoverController;
+@interface MainViewController : UIViewController <UIPopoverControllerDelegate, NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UITableView *linesOfInterestTableView;
 
 @end
+
+NSDictionary *convertSearchResultToLineOfInterest(NSDictionary *result);

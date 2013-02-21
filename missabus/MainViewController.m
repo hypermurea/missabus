@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "UserIdentification.h"
+#import "TransportSearchDisplayController.h"
 
 @interface MainViewController ()
 
@@ -15,85 +16,89 @@
 
 @implementation MainViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-    
-    UserIdentification *user = [UserIdentification instance];
-	// Do any additional setup after loading the view, typically from a nib.
-    UIAlertView *a = [[UIAlertView alloc] initWithTitle:@"UUID" message:[user userId] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    [a show];
-    
-    [user login:self];
+			
+	self.searchDisplayController.searchResultsDataSource = (id<UITableViewDataSource>) self.searchDisplayController;
+	self.searchDisplayController.delegate = (id<UISearchDisplayDelegate>) self.searchDisplayController;
+	self.searchDisplayController.searchResultsDelegate = self;
+
+	[[UserIdentification instance] login:self];
     
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Flipside View Controller
-
-- (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller
-{
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        [self dismissViewControllerAnimated:YES completion:nil];
-    } else {
-        [self.flipsidePopoverController dismissPopoverAnimated:YES];
-        self.flipsidePopoverController = nil;
-    }
-}
-
-- (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController
-{
-    self.flipsidePopoverController = nil;
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([[segue identifier] isEqualToString:@"showAlternate"]) {
-        [[segue destinationViewController] setDelegate:self];
-        
-        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-            UIPopoverController *popoverController = [(UIStoryboardPopoverSegue *)segue popoverController];
-            self.flipsidePopoverController = popoverController;
-            popoverController.delegate = self;
-        }
-    }
-}
-
-- (IBAction)togglePopover:(id)sender
-{
-    if (self.flipsidePopoverController) {
-        [self.flipsidePopoverController dismissPopoverAnimated:YES];
-        self.flipsidePopoverController = nil;
-    } else {
-        [self performSegueWithIdentifier:@"showAlternate" sender:sender];
-    }
-}
 
 // NSURLConnectionDelegate implementation
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
-{
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
     NSLog(@"connection failed with error");
 }
 
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
-{
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
     NSLog(@"Did receive data");
 }
 
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
-{
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
     NSLog(@"didReceiveResponse");
 }
 
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection
-{
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     NSLog(@"connectionDidFinishLoading");
 }
 
+// UITableViewDelegate implementation
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	
+	if(tableView == self.searchDisplayController.searchResultsTableView) {
+		
+		TransportSearchDisplayController *controller = (TransportSearchDisplayController *) self.searchDisplayController;
+		NSArray *currentResults = [controller getCurrentQueryResults];
+		NSDictionary *itemDict = convertSearchResultToLineOfInterest([currentResults objectAtIndex:indexPath.item]);
+		[[UserIdentification instance] addLineOfInterest:itemDict];
+
+		[self.linesOfInterestTableView reloadData];
+		[self.searchDisplayController setActive:NO];
+	} else {
+		[[UserIdentification instance] removeLineOfInterest:[indexPath item]];
+		[self.linesOfInterestTableView reloadData];
+	}
+}
+
+NSDictionary *convertSearchResultToLineOfInterest(NSDictionary *result) {
+/*
+ code: line.code, shortCode: line.shortCode,
+transportType: line.transportType, name: line.name, user: user)
+*/
+return [NSDictionary dictionaryWithObjectsAndKeys:
+		[result objectForKey:@"code"], @"code",
+		[result objectForKey:@"code_short"], @"shortCode",
+		[result objectForKey:@"transport_type_id"], @"transportType",
+		[result objectForKey:@"name"], @"name",
+		nil];
+}
+
+// UITableViewDataSource implementation
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+	static NSString *MyIdentifier = @"MainViewControllerCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:MyIdentifier];
+    }
+	
+	NSDictionary *entry = [[[UserIdentification instance] linesOfInterest] objectAtIndex:[indexPath item]];
+	cell.textLabel.text = [entry objectForKey:@"shortCode"];
+	cell.detailTextLabel.text = [entry objectForKey:@"name"];
+	cell.imageView.image = [UIImage imageNamed:
+							imageNameForTransportType([[entry objectForKey:@"transportType"] stringValue])];
+	return cell;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+	return [[[UserIdentification instance] linesOfInterest] count];
+}
 
 @end

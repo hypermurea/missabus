@@ -7,7 +7,10 @@
 //
 
 #import <SenTestingKit/SenTestingKit.h>
+#import "UserIdentification.h"
 
 @interface UserIdentificationTests : SenTestCase
+
+@property (nonatomic, strong) UserIdentification *ident;
 
 @end

@@ -12,16 +12,19 @@
 @interface UserIdentification : NSObject
 
 {
-	PropertyStore *propertyStore;
 	NSURLConnection *connection;
 	NSMutableData *jsonData;
 }
+
+@property (nonatomic, strong) PropertyStore *propertyStore;
 
 + (id) instance;
 
 - (void) login: (id) delegate;
 - (NSString *) userId;
-- (NSMutableArray *) linesOfInterest;
-- (void) linesOfInterest: (NSMutableArray *) array;
+- (NSArray *) linesOfInterest;
+- (void) linesOfInterest: (NSArray *) array;
+- (void) addLineOfInterest: (NSDictionary *) item;
+- (void) removeLineOfInterest: (NSUInteger) index;
 
 @end

@@ -10,6 +10,13 @@
 		DE3D098F16D220C100C64EA8 /* PropertyStore.m in Sources */ = {isa = PBXBuildFile; fileRef = DE3D098E16D220C100C64EA8 /* PropertyStore.m */; };
 		DE3D099416D22FF000C64EA8 /* PropertyStoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE3D099316D22FF000C64EA8 /* PropertyStoreTests.m */; };
 		DE3D099716D24D8800C64EA8 /* UserIdentificationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE3D099616D24D8800C64EA8 /* UserIdentificationTests.m */; };
+		DE4EFE8516D644A300B6B757 /* MainViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4EFE8416D644A300B6B757 /* MainViewControllerTests.m */; };
+		DE5F8F7316D6087000D3E155 /* tjuna_iso.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5F8F7216D6087000D3E155 /* tjuna_iso.png */; };
+		DE66A3F116D4BBBF00877634 /* TransportSearchDisplayControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE66A3F016D4BBBF00877634 /* TransportSearchDisplayControllerTests.m */; };
+		DE66A3F316D5036400877634 /* tbussi_iso.png in Resources */ = {isa = PBXBuildFile; fileRef = DE66A3F216D5036400877634 /* tbussi_iso.png */; };
+		DE66A3F516D504B700877634 /* tmetro_iso.png in Resources */ = {isa = PBXBuildFile; fileRef = DE66A3F416D504B700877634 /* tmetro_iso.png */; };
+		DE66A3F716D504C200877634 /* traitio_iso.png in Resources */ = {isa = PBXBuildFile; fileRef = DE66A3F616D504C200877634 /* traitio_iso.png */; };
+		DE66A3F916D504CB00877634 /* tlautta_iso.png in Resources */ = {isa = PBXBuildFile; fileRef = DE66A3F816D504CB00877634 /* tlautta_iso.png */; };
 		DEDB167416C3D6B200DA85F0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDB167316C3D6B200DA85F0 /* UIKit.framework */; };
 		DEDB167616C3D6B200DA85F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDB167516C3D6B200DA85F0 /* Foundation.framework */; };
 		DEDB167816C3D6B200DA85F0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDB167716C3D6B200DA85F0 /* CoreGraphics.framework */; };
@@ -22,7 +29,6 @@
 		DEDB168D16C3D6B200DA85F0 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEDB168B16C3D6B200DA85F0 /* MainStoryboard_iPhone.storyboard */; };
 		DEDB169016C3D6B200DA85F0 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEDB168E16C3D6B200DA85F0 /* MainStoryboard_iPad.storyboard */; };
 		DEDB169316C3D6B200DA85F0 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDB169216C3D6B200DA85F0 /* MainViewController.m */; };
-		DEDB169616C3D6B200DA85F0 /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDB169516C3D6B200DA85F0 /* FlipsideViewController.m */; };
 		DEDB169E16C3D6B200DA85F0 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDB169D16C3D6B200DA85F0 /* SenTestingKit.framework */; };
 		DEDB169F16C3D6B200DA85F0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDB167316C3D6B200DA85F0 /* UIKit.framework */; };
 		DEDB16A016C3D6B200DA85F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDB167516C3D6B200DA85F0 /* Foundation.framework */; };
@@ -30,6 +36,7 @@
 		DEDB16AB16C3D6B200DA85F0 /* missabusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDB16AA16C3D6B200DA85F0 /* missabusTests.m */; };
 		DEDB16B616C3D98000DA85F0 /* UserIdentification.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDB16B516C3D98000DA85F0 /* UserIdentification.m */; };
 		DEDB16B916C3E15300DA85F0 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DEDB16B816C3E15300DA85F0 /* icon.png */; };
+		DEFDC4CE16D3AC7500231F82 /* TransportSearchDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFDC4CD16D3AC7500231F82 /* TransportSearchDisplayController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +57,15 @@
 		DE3D099316D22FF000C64EA8 /* PropertyStoreTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyStoreTests.m; sourceTree = "<group>"; };
 		DE3D099516D24D8800C64EA8 /* UserIdentificationTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserIdentificationTests.h; sourceTree = "<group>"; };
 		DE3D099616D24D8800C64EA8 /* UserIdentificationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserIdentificationTests.m; sourceTree = "<group>"; };
+		DE4EFE8316D644A300B6B757 /* MainViewControllerTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewControllerTests.h; sourceTree = "<group>"; };
+		DE4EFE8416D644A300B6B757 /* MainViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewControllerTests.m; sourceTree = "<group>"; };
+		DE5F8F7216D6087000D3E155 /* tjuna_iso.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tjuna_iso.png; sourceTree = "<group>"; };
+		DE66A3EF16D4BBBF00877634 /* TransportSearchDisplayControllerTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransportSearchDisplayControllerTests.h; sourceTree = "<group>"; };
+		DE66A3F016D4BBBF00877634 /* TransportSearchDisplayControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransportSearchDisplayControllerTests.m; sourceTree = "<group>"; };
+		DE66A3F216D5036400877634 /* tbussi_iso.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tbussi_iso.png; sourceTree = "<group>"; };
+		DE66A3F416D504B700877634 /* tmetro_iso.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tmetro_iso.png; sourceTree = "<group>"; };
+		DE66A3F616D504C200877634 /* traitio_iso.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = traitio_iso.png; sourceTree = "<group>"; };
+		DE66A3F816D504CB00877634 /* tlautta_iso.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tlautta_iso.png; sourceTree = "<group>"; };
 		DEDB166F16C3D6B200DA85F0 /* missabus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = missabus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEDB167316C3D6B200DA85F0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DEDB167516C3D6B200DA85F0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -67,8 +83,6 @@
 		DEDB168F16C3D6B200DA85F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		DEDB169116C3D6B200DA85F0 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		DEDB169216C3D6B200DA85F0 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		DEDB169416C3D6B200DA85F0 /* FlipsideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlipsideViewController.h; sourceTree = "<group>"; };
-		DEDB169516C3D6B200DA85F0 /* FlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
 		DEDB169C16C3D6B200DA85F0 /* missabusTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = missabusTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEDB169D16C3D6B200DA85F0 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		DEDB16A516C3D6B200DA85F0 /* missabusTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "missabusTests-Info.plist"; sourceTree = "<group>"; };
@@ -78,6 +92,8 @@
 		DEDB16B416C3D98000DA85F0 /* UserIdentification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserIdentification.h; sourceTree = "<group>"; };
 		DEDB16B516C3D98000DA85F0 /* UserIdentification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserIdentification.m; sourceTree = "<group>"; };
 		DEDB16B816C3E15300DA85F0 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		DEFDC4CC16D3AC7500231F82 /* TransportSearchDisplayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransportSearchDisplayController.h; sourceTree = "<group>"; };
+		DEFDC4CD16D3AC7500231F82 /* TransportSearchDisplayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransportSearchDisplayController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,11 +163,11 @@
 				DEDB168E16C3D6B200DA85F0 /* MainStoryboard_iPad.storyboard */,
 				DEDB169116C3D6B200DA85F0 /* MainViewController.h */,
 				DEDB169216C3D6B200DA85F0 /* MainViewController.m */,
-				DEDB169416C3D6B200DA85F0 /* FlipsideViewController.h */,
-				DEDB169516C3D6B200DA85F0 /* FlipsideViewController.m */,
 				DEDB167A16C3D6B200DA85F0 /* Supporting Files */,
 				DE3D098D16D220C100C64EA8 /* PropertyStore.h */,
 				DE3D098E16D220C100C64EA8 /* PropertyStore.m */,
+				DEFDC4CC16D3AC7500231F82 /* TransportSearchDisplayController.h */,
+				DEFDC4CD16D3AC7500231F82 /* TransportSearchDisplayController.m */,
 			);
 			path = missabus;
 			sourceTree = "<group>";
@@ -180,6 +196,10 @@
 				DE3D099316D22FF000C64EA8 /* PropertyStoreTests.m */,
 				DE3D099516D24D8800C64EA8 /* UserIdentificationTests.h */,
 				DE3D099616D24D8800C64EA8 /* UserIdentificationTests.m */,
+				DE66A3EF16D4BBBF00877634 /* TransportSearchDisplayControllerTests.h */,
+				DE66A3F016D4BBBF00877634 /* TransportSearchDisplayControllerTests.m */,
+				DE4EFE8316D644A300B6B757 /* MainViewControllerTests.h */,
+				DE4EFE8416D644A300B6B757 /* MainViewControllerTests.m */,
 			);
 			path = missabusTests;
 			sourceTree = "<group>";
@@ -196,6 +216,11 @@
 		DEDB16B716C3E11000DA85F0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DE5F8F7216D6087000D3E155 /* tjuna_iso.png */,
+				DE66A3F816D504CB00877634 /* tlautta_iso.png */,
+				DE66A3F616D504C200877634 /* traitio_iso.png */,
+				DE66A3F416D504B700877634 /* tmetro_iso.png */,
+				DE66A3F216D5036400877634 /* tbussi_iso.png */,
 				DEDB16B816C3E15300DA85F0 /* icon.png */,
 			);
 			name = Resources;
@@ -279,6 +304,11 @@
 				DEDB168D16C3D6B200DA85F0 /* MainStoryboard_iPhone.storyboard in Resources */,
 				DEDB169016C3D6B200DA85F0 /* MainStoryboard_iPad.storyboard in Resources */,
 				DEDB16B916C3E15300DA85F0 /* icon.png in Resources */,
+				DE66A3F316D5036400877634 /* tbussi_iso.png in Resources */,
+				DE66A3F516D504B700877634 /* tmetro_iso.png in Resources */,
+				DE66A3F716D504C200877634 /* traitio_iso.png in Resources */,
+				DE66A3F916D504CB00877634 /* tlautta_iso.png in Resources */,
+				DE5F8F7316D6087000D3E155 /* tjuna_iso.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,9 +346,9 @@
 				DEDB168016C3D6B200DA85F0 /* main.m in Sources */,
 				DEDB168416C3D6B200DA85F0 /* AppDelegate.m in Sources */,
 				DEDB169316C3D6B200DA85F0 /* MainViewController.m in Sources */,
-				DEDB169616C3D6B200DA85F0 /* FlipsideViewController.m in Sources */,
 				DEDB16B616C3D98000DA85F0 /* UserIdentification.m in Sources */,
 				DE3D098F16D220C100C64EA8 /* PropertyStore.m in Sources */,
+				DEFDC4CE16D3AC7500231F82 /* TransportSearchDisplayController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +359,8 @@
 				DEDB16AB16C3D6B200DA85F0 /* missabusTests.m in Sources */,
 				DE3D099416D22FF000C64EA8 /* PropertyStoreTests.m in Sources */,
 				DE3D099716D24D8800C64EA8 /* UserIdentificationTests.m in Sources */,
+				DE66A3F116D4BBBF00877634 /* TransportSearchDisplayControllerTests.m in Sources */,
+				DE4EFE8516D644A300B6B757 /* MainViewControllerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
