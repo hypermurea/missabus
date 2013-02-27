@@ -28,32 +28,75 @@ static UserIdentification *user;
 	self = [super init];
 	if(self != nil) {
 		propertyStore = [[PropertyStore alloc] init];
+		loginQueue = [[NSOperationQueue alloc] init];
 	}
 	return self;
 }
 
-- (void) login:(id)delegate {
+
+
+- (void) login {
 	
 	// params for http request are /mobile/?uuid=xxx&lof=xxx&device=ios
 	
-    jsonData = [[NSMutableData alloc] init];
-    
 	NSError *error;
 	NSData *json = [NSJSONSerialization dataWithJSONObject:[self linesOfInterest]  options:kNilOptions error:&error];
 	NSString *linesOfInterestText = [[NSString alloc] initWithData:json encoding:NSUTF8StringEncoding];
-		
+	
 	NSURL *url = [NSURL URLWithString: [NSString stringWithFormat: @"%@/mobile", SERVER_URL]];
-	NSString *post = [NSString stringWithFormat: @"device=ios&uuid=%@&lof=%@", [self userId], linesOfInterestText];
+	NSString *post = [NSString stringWithFormat: @"device=ios&uuid=%@&lof=%@&regId=%@", [self userId], linesOfInterestText, [propertyStore.properties objectForKey:@"regId"]];
 	NSData *postData = [post dataUsingEncoding: NSUTF8StringEncoding];
-				  
+	
     NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:url];
 	[req setCachePolicy:NSURLRequestReloadIgnoringLocalCacheData];
 	[req setHTTPMethod: @"POST"];
 	[req setValue: @"application/x-www-form-urlencoded" forHTTPHeaderField:@"content-type"];
 	[req setHTTPBody: postData];
 	NSLog(@"opening connection to: %@ ;data:%@", [url absoluteString], post);
-    connection = [[NSURLConnection alloc] initWithRequest:req delegate:delegate startImmediately: YES];
+	
+	[NSURLConnection sendAsynchronousRequest:req
+									   queue: loginQueue
+						   completionHandler:^(NSURLResponse *response, NSData *data, NSError *error)
+	 {
+		 if(error == nil) {
+			 NSLog(@"Login completed successfully");
+			 
+		 } else {
+			 [[NSOperationQueue mainQueue] addOperationWithBlock: ^{
+				 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Network access failure"
+																 message:@"Network connection failed. Please check you have a working internet connection."
+																delegate:nil
+													   cancelButtonTitle:@"OK"
+													   otherButtonTitles:nil];
+				 [alert show];
+		     }];
+		 }
+	 }
+	 ];
 }
+
+- (void) login:(NSData *) deviceToken {
+	
+	NSString *deviceTokenHex = convertTokenToDeviceId(deviceToken);
+	[propertyStore.properties setObject:deviceTokenHex forKey: @"regId"];
+	[self login];
+}
+
+NSString *convertTokenToDeviceId(NSData *token) {
+	
+	NSMutableString *deviceID = [NSMutableString string];
+	
+	// iterate through the bytes and convert to hex
+	unsigned char *ptr = (unsigned char *)[token bytes];
+	
+	for (NSInteger i=0; i < 32; ++i) {
+		[deviceID appendString:[NSString stringWithFormat:@"%02x", ptr[i]]];
+	}
+	
+	return deviceID;
+}
+
+
 
 - (NSArray *) linesOfInterest {
 	NSData *json = [[propertyStore properties] objectForKey:@"lof"]; // TODO magic constant
@@ -72,18 +115,19 @@ static UserIdentification *user;
 	for(NSDictionary *line in [self linesOfInterest]) {
 		
 		if([[item objectForKey:@"shortCode"] isEqualToString: [line objectForKey:@"shortCode"]] &&
-		   [[item objectForKey:@"transportType"] isEqualToString: [line objectForKey:@"transportType"]]) {
+		   [[item objectForKey:@"transportType"] isEqualToNumber: [line objectForKey:@"transportType"]]) {
 			duplicate = YES;
 			break;
 		}
-		
 	}
 	
-	if(!duplicate) {
+	if(duplicate == NO) {
 		NSMutableArray *mutableCopy = [[self linesOfInterest] mutableCopy];
 		[mutableCopy addObject:item];
 		[self linesOfInterest:mutableCopy];
 	}
+	
+	
 }
 
 - (void) removeLineOfInterest: (NSUInteger) index {

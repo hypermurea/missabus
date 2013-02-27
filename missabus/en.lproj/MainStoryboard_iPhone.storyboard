@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
         <!--Main View Controller-->
@@ -20,33 +20,20 @@
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="aG1-S3-e1P" userLabel="Lines of interest table">
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <color key="separatorColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="2" id="7lT-92-fpI"/>
                                     <outlet property="delegate" destination="2" id="HxX-PN-5KA"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="wim-DA-Yj6">
-                                <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="78" id="DUe-2O-DxG"/>
-                                </constraints>
-                                <string key="text">Alla näkyvät joukkoliikenteen linjat, joista tällä hetkellä vastaanotat häiriötiedotuksia. Voit käyttää hakupalkkia lisätäksesi uusia.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <color key="highlightedColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="rxB-fN-H7l" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="5Ex-CJ-gIi"/>
                             <constraint firstItem="rxB-fN-H7l" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="8eV-5w-BSM"/>
+                            <constraint firstItem="aG1-S3-e1P" firstAttribute="top" secondItem="rxB-fN-H7l" secondAttribute="bottom" type="default" id="GIz-g4-E7P"/>
                             <constraint firstItem="rxB-fN-H7l" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="JLk-Fp-AtJ"/>
-                            <constraint firstItem="aG1-S3-e1P" firstAttribute="top" secondItem="wim-DA-Yj6" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="LnP-xf-8Rz"/>
-                            <constraint firstItem="wim-DA-Yj6" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="VLA-RU-mET"/>
-                            <constraint firstItem="wim-DA-Yj6" firstAttribute="top" secondItem="rxB-fN-H7l" secondAttribute="bottom" type="default" id="g5M-ER-2fi"/>
                             <constraint firstItem="aG1-S3-e1P" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="gw9-YY-rNJ"/>
-                            <constraint firstItem="wim-DA-Yj6" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="kRC-wX-EUX"/>
                             <constraint firstItem="aG1-S3-e1P" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="kUu-3e-lQp"/>
                             <constraint firstItem="aG1-S3-e1P" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="qs1-28-AUt"/>
                         </constraints>

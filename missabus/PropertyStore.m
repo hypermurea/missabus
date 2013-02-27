@@ -16,7 +16,12 @@
 - (id) init {
 	self = [super init];
 	if(self != nil) {
-		properties = [[NSMutableDictionary alloc] initWithContentsOfFile: [PropertyStore propertyFilePath]];
+		NSString *path = [PropertyStore propertyFilePath];
+		if([[NSFileManager defaultManager] fileExistsAtPath:path] == YES) {
+			properties = [[NSMutableDictionary alloc] initWithContentsOfFile: path];
+		} else {
+			properties = [NSMutableDictionary dictionary];
+		}
 	}
 	return self;
 }
@@ -35,7 +40,6 @@
 														 errorDescription:&error];
 	
 	NSString *path = [PropertyStore propertyFilePath];
-	NSLog(@"Saving properties to path:%@\ndata:%@", path, self.properties);
 	
 	if(plistData) {
 		[plistData writeToFile:path atomically:YES];

@@ -40,8 +40,8 @@
 }
 
 - (void) testSetLinesOfInterestShouldChangeGetResult {
-	NSDictionary *line = [NSDictionary dictionaryWithObjectsAndKeys: @"195", @"code", @"19", @"shortCode",  @"12", @"transportType", @"Keskusta - Espoo", @"name", nil];
-	NSDictionary *line2 = [NSDictionary dictionaryWithObjectsAndKeys: @"505", @"code", @"19", @"shortCode",  @"12", @"transportType", @"Helsinki - Joku", @"name", nil];
+	NSDictionary *line = [NSDictionary dictionaryWithObjectsAndKeys: @"195", @"code", @"19", @"shortCode",  [NSNumber numberWithInt: 12], @"transportType", @"Keskusta - Espoo", @"name", nil];
+	NSDictionary *line2 = [NSDictionary dictionaryWithObjectsAndKeys: @"505", @"code", @"19", @"shortCode",  [NSNumber numberWithInt: 12], @"transportType", @"Helsinki - Joku", @"name", nil];
 	NSMutableArray *linesOfInterest = [NSMutableArray arrayWithObjects:line, line2, nil];
 	
 	[ident linesOfInterest: linesOfInterest];
@@ -51,12 +51,12 @@
 	line = [result objectAtIndex: 0];
 	line2 = [result objectAtIndex: 1];
 	STAssertTrue([[line objectForKey: @"code"] isEqualToString: @"195"], @"dictionary keys must match with JSON input");
-	STAssertTrue([[line objectForKey: @"transportType"] isEqualToString: @"12"], @"dictionary keys must match with JSON input");
+	STAssertTrue([[line objectForKey: @"transportType"] isEqualToNumber: [NSNumber numberWithInt: 12]], @"dictionary keys must match with JSON input");
 }
 
 - (void) testAdditionToLinesOfInterestFailsWhenNewItemDuplicated {
-	NSDictionary *line = [NSDictionary dictionaryWithObjectsAndKeys: @"195", @"code", @"19", @"shortCode",  @"12", @"transportType", @"Keskusta - Espoo", @"name", nil];
-	NSDictionary *line2 = [NSDictionary dictionaryWithObjectsAndKeys: @"505", @"code", @"19", @"shortCode",  @"12", @"transportType", @"Helsinki - Joku", @"name", nil];
+	NSDictionary *line = [NSDictionary dictionaryWithObjectsAndKeys: @"195", @"code", @"19", @"shortCode", [NSNumber numberWithInt:12], @"transportType", @"Keskusta - Espoo", @"name", nil];
+	NSDictionary *line2 = [NSDictionary dictionaryWithObjectsAndKeys: @"505", @"code", @"19", @"shortCode",[NSNumber numberWithInt:12], @"transportType", @"Helsinki - Joku", @"name", nil];
 	NSArray *original = [NSArray arrayWithObjects:line, line2, nil];
 	
 	[ident linesOfInterest: original];
@@ -67,14 +67,14 @@
 }
 
 - (void) testAdditionToLinesOfInterestSucceeds {
-	NSDictionary *line = [NSDictionary dictionaryWithObjectsAndKeys: @"195", @"code", @"19", @"shortCode",  @"12", @"transportType", @"Keskusta - Espoo", @"name", nil];
-	NSDictionary *line2 = [NSDictionary dictionaryWithObjectsAndKeys: @"505", @"code", @"19", @"shortCode",  @"12", @"transportType", @"Helsinki - Joku", @"name", nil];
+	NSDictionary *line = [NSDictionary dictionaryWithObjectsAndKeys: @"195", @"code", @"19", @"shortCode", [NSNumber numberWithInt:12], @"transportType", @"Keskusta - Espoo", @"name", nil];
+	NSDictionary *line2 = [NSDictionary dictionaryWithObjectsAndKeys: @"505", @"code", @"19", @"shortCode", [NSNumber numberWithInt:12], @"transportType", @"Helsinki - Joku", @"name", nil];
 	NSArray *original = [NSArray arrayWithObjects:line, line2, nil];
 	
 	[ident linesOfInterest: original];
 	STAssertEquals([[ident linesOfInterest] count], (NSUInteger) 2, @"lines of interest size should match");
 
-	NSDictionary *newLine = [NSDictionary dictionaryWithObjectsAndKeys: @"505", @"code", @"256", @"shortCode",  @"12", @"transportType", @"Helsinki - Joku", @"name", nil];
+	NSDictionary *newLine = [NSDictionary dictionaryWithObjectsAndKeys: @"505", @"code", @"256", @"shortCode", [NSNumber numberWithInt:12], @"transportType", @"Helsinki - Joku", @"name", nil];
 
 	[ident addLineOfInterest: newLine];
 	STAssertEquals([[ident linesOfInterest] count], (NSUInteger) 3, @"lines of interest size should change when adding a new line");

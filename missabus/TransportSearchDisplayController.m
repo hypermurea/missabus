@@ -21,6 +21,9 @@ static NSDictionary *transportTypeImageMapping;
 
 - (void) startTransportLineQuery: (NSString *) query {
 	
+	if(searchQueue == nil) {
+		searchQueue = [[NSOperationQueue alloc] init];
+	}
 	if(searchResults == nil) {
 		searchResults = [NSMutableArray array];
 	}
@@ -31,8 +34,38 @@ static NSDictionary *transportTypeImageMapping;
 	
     NSURLRequest *req = [NSURLRequest requestWithURL:url];
 	NSLog(@"opening connection to: %@", [url absoluteString]);
+	NSLog(@"searchq: %@", searchQueue);
+		
 	
-    connection = [[NSURLConnection alloc] initWithRequest:req delegate:self startImmediately: YES];
+    //currentConnection = [[NSURLConnection alloc] initWithRequest:req delegate:self startImmediately: YES];
+	
+	[NSURLConnection sendAsynchronousRequest:req
+			queue: searchQueue
+			completionHandler:^(NSURLResponse *response, NSData *data, NSError *error)
+			{
+				if(error == nil) {
+					NSLog(@"Request completed");
+					[[NSOperationQueue mainQueue] addOperationWithBlock:^{
+						
+						NSString *json = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+						//NSLog(@"JSON output: %@", json);
+						
+						NSData *encodedData = [json dataUsingEncoding:NSUTF8StringEncoding];
+						NSError *error;
+						
+						NSMutableArray *results = [NSJSONSerialization JSONObjectWithData:encodedData options:NSJSONReadingMutableContainers error:&error];
+						removeDuplicateTransportLines(results);
+						
+						[searchResults removeAllObjects];
+						[searchResults addObjectsFromArray:results];
+						[self.searchResultsTableView reloadData];
+					}];
+				} else {
+					NSLog(@"Request failed with error: %@", [error localizedDescription]);
+				}
+			}
+	 ];
+	
 
 }
 
@@ -44,6 +77,8 @@ static NSDictionary *transportTypeImageMapping;
 // NSURLConnectionDelegate implementation
 // TODO Implemented in this way, the jsonData/connection are bound to be overwritten accidentally when multiple quries come in, fix.
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+	[self checkIfCurrentConnection: connection];
+	NSLog(@"Connection did fail with error");
 	[[NSOperationQueue mainQueue] addOperationWithBlock:^{
 		[searchResults removeAllObjects];
 		[self.searchResultsTableView reloadData];
@@ -51,14 +86,17 @@ static NSDictionary *transportTypeImageMapping;
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+	[self checkIfCurrentConnection: connection];
 	[jsonData appendData: data];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+	[self checkIfCurrentConnection: connection];
 	jsonData = [NSMutableData data];
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+	[self checkIfCurrentConnection: connection];
 	
 	[[NSOperationQueue mainQueue] addOperationWithBlock:^{
 		
@@ -76,6 +114,12 @@ static NSDictionary *transportTypeImageMapping;
 		[self.searchResultsTableView reloadData];
 	}];
 
+}
+
+-(void) checkIfCurrentConnection: (NSURLConnection *) conn {
+	if(currentConnection != conn) {
+		NSLog(@"Received data for other than current connection!!!");
+	}
 }
 
 void removeDuplicateTransportLines(NSMutableArray *array) {

@@ -7,15 +7,34 @@
 //
 
 #import "AppDelegate.h"
+#import "UserIdentification.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+
+	// Register with the Apple Push Notification Service
+    // so we can receive notifications from our server
+    // application.  Upon successful registration, our
+    // didRegisterForRemoteNotificationsWithDeviceToken:
+    // delegate callback will be invoked with our unique
+    // device token.
+    UIRemoteNotificationType allowedNotifications = UIRemoteNotificationTypeAlert
+	| UIRemoteNotificationTypeSound
+	| UIRemoteNotificationTypeBadge;
+    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:allowedNotifications];
+		
     return YES;
 }
-							
+
+- (void)application:(UIApplication *)application
+didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    NSLog(@"didRegisterForRemoteNotificationsWithDeviceToken: %@", deviceToken);
+	[[UserIdentification instance] login:deviceToken];
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

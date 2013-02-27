@@ -17,6 +17,7 @@
 		DE66A3F516D504B700877634 /* tmetro_iso.png in Resources */ = {isa = PBXBuildFile; fileRef = DE66A3F416D504B700877634 /* tmetro_iso.png */; };
 		DE66A3F716D504C200877634 /* traitio_iso.png in Resources */ = {isa = PBXBuildFile; fileRef = DE66A3F616D504C200877634 /* traitio_iso.png */; };
 		DE66A3F916D504CB00877634 /* tlautta_iso.png in Resources */ = {isa = PBXBuildFile; fileRef = DE66A3F816D504CB00877634 /* tlautta_iso.png */; };
+		DEC39EFD16DB4AC100372B5C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = DEC39EFC16DB4AC100372B5C /* .gitignore */; };
 		DEDB167416C3D6B200DA85F0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDB167316C3D6B200DA85F0 /* UIKit.framework */; };
 		DEDB167616C3D6B200DA85F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDB167516C3D6B200DA85F0 /* Foundation.framework */; };
 		DEDB167816C3D6B200DA85F0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDB167716C3D6B200DA85F0 /* CoreGraphics.framework */; };
@@ -35,8 +36,8 @@
 		DEDB16A816C3D6B200DA85F0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DEDB16A616C3D6B200DA85F0 /* InfoPlist.strings */; };
 		DEDB16AB16C3D6B200DA85F0 /* missabusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDB16AA16C3D6B200DA85F0 /* missabusTests.m */; };
 		DEDB16B616C3D98000DA85F0 /* UserIdentification.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDB16B516C3D98000DA85F0 /* UserIdentification.m */; };
-		DEDB16B916C3E15300DA85F0 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DEDB16B816C3E15300DA85F0 /* icon.png */; };
 		DEFDC4CE16D3AC7500231F82 /* TransportSearchDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFDC4CD16D3AC7500231F82 /* TransportSearchDisplayController.m */; };
+		DEFE645616DE16BB007DA323 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DEDB16B816C3E15300DA85F0 /* icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		DE66A3F416D504B700877634 /* tmetro_iso.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tmetro_iso.png; sourceTree = "<group>"; };
 		DE66A3F616D504C200877634 /* traitio_iso.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = traitio_iso.png; sourceTree = "<group>"; };
 		DE66A3F816D504CB00877634 /* tlautta_iso.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tlautta_iso.png; sourceTree = "<group>"; };
+		DEC39EFC16DB4AC100372B5C /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		DEDB166F16C3D6B200DA85F0 /* missabus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = missabus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEDB167316C3D6B200DA85F0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DEDB167516C3D6B200DA85F0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -123,6 +125,7 @@
 		DEDB166416C3D6B100DA85F0 = {
 			isa = PBXGroup;
 			children = (
+				DEC39EFC16DB4AC100372B5C /* .gitignore */,
 				DEDB16B716C3E11000DA85F0 /* Resources */,
 				DEDB167916C3D6B200DA85F0 /* missabus */,
 				DEDB16A316C3D6B200DA85F0 /* missabusTests */,
@@ -303,12 +306,13 @@
 				DEDB168A16C3D6B200DA85F0 /* Default-568h@2x.png in Resources */,
 				DEDB168D16C3D6B200DA85F0 /* MainStoryboard_iPhone.storyboard in Resources */,
 				DEDB169016C3D6B200DA85F0 /* MainStoryboard_iPad.storyboard in Resources */,
-				DEDB16B916C3E15300DA85F0 /* icon.png in Resources */,
 				DE66A3F316D5036400877634 /* tbussi_iso.png in Resources */,
 				DE66A3F516D504B700877634 /* tmetro_iso.png in Resources */,
 				DE66A3F716D504C200877634 /* traitio_iso.png in Resources */,
 				DE66A3F916D504CB00877634 /* tlautta_iso.png in Resources */,
 				DE5F8F7316D6087000D3E155 /* tjuna_iso.png in Resources */,
+				DEC39EFD16DB4AC100372B5C /* .gitignore in Resources */,
+				DEFE645616DE16BB007DA323 /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

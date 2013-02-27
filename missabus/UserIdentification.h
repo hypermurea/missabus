@@ -12,15 +12,15 @@
 @interface UserIdentification : NSObject
 
 {
-	NSURLConnection *connection;
-	NSMutableData *jsonData;
+	NSOperationQueue *loginQueue;
 }
 
 @property (nonatomic, strong) PropertyStore *propertyStore;
 
 + (id) instance;
 
-- (void) login: (id) delegate;
+- (void) login: (NSData *) deviceToken;
+- (void) login;
 - (NSString *) userId;
 - (NSArray *) linesOfInterest;
 - (void) linesOfInterest: (NSArray *) array;
@@ -28,3 +28,5 @@
 - (void) removeLineOfInterest: (NSUInteger) index;
 
 @end
+
+NSString *convertTokenToDeviceId(NSData *token);

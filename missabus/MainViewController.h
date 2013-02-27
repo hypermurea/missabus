@@ -8,7 +8,7 @@
 
 #import "TransportSearchDisplayController.h"
 
-@interface MainViewController : UIViewController <UIPopoverControllerDelegate, NSURLConnectionDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface MainViewController : UIViewController <UIPopoverControllerDelegate, UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *linesOfInterestTableView;
 
 @end
