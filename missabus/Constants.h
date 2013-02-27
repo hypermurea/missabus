@@ -9,17 +9,17 @@
 #ifndef missabus_Constants_h
 #define missabus_Constants_h
 
-#define DEVELOPMENT
+//#define DEVELOPMENT
 
 #ifdef DEVELOPMENT
 	#define SERVER_URL @"http://localhost:8080/hslpush"
 #else
-	#define SERVER_URL @"http://hslpush.cloudfoundry.com"
+	#define SERVER_URL @"xxx"
 #endif
 
 #define REITTIOPAS_API_URL @"http://api.reittiopas.fi/hsl/prod"
-#define REITTIOPAS_USER @"hslpusher"
-#define REITTIOPAS_PWD @"hpHalvatLapparit1"
+#define REITTIOPAS_USER @"xxx"
+#define REITTIOPAS_PWD @"xxx"
 
 // Images recovered from http://www.poikkeusinfo.fi/pinfo/public/images/iconit/juna.png etc.
 #define BUS_IMAGE @"tbussi_iso.png"
